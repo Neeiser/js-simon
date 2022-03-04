@@ -12,9 +12,18 @@ const numbersOutput = document.getElementById ('output')
 
 const randomNumbersArr = [];
 
-function randomNumbers(numbers) {
 
-    Math.floor(Math.random() * 10 ) + 1;
-    return numbers;
+while (randomNumbersArr.length < 5){
+    let numberPulled = Math.floor(Math.random() * 20 ) + 1;
     
+    if (randomNumbersArr.includes(numberPulled) == false) { 
+        randomNumbersArr.push(numberPulled);
+    }
+
+    console.log(randomNumbersArr)
 }
+
+checkBtn.addEventListener('click', function(){
+
+    
+});
