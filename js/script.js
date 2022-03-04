@@ -6,6 +6,7 @@
 */
 
 const numbersDisplayed = document.getElementById ('numbers-displayed')
+const titleDisplayed = document.getElementById ('title-displayed')
 const numbersInput = document.getElementById ('numbers-input')
 const checkBtn = document.getElementById ('check-btn')
 const numbersOutput = document.getElementById ('output')
@@ -13,8 +14,8 @@ const numbersOutput = document.getElementById ('output')
 const randomNumbersArr = [];
 
 
-
-/* 
+/*
+-----------------------------------------------------------------------------
 - Visualizzare in pagina 5 numeri casuali.
 */
 
@@ -28,9 +29,13 @@ while (randomNumbersArr.length < 5){
     console.log(randomNumbersArr)
 }
 
+/* Dove stampo i numeri estratti? */
+numbersDisplayed.innerHTML = randomNumbersArr; 
 
 
-/* 
+
+/*
+-----------------------------------------------------------------------------
 - Da lì parte un timer di 30 secondi.
 */
 
@@ -46,23 +51,33 @@ function timer() {
   }
 timer();
 
+
+
+
+
+/*
+-----------------------------------------------------------------------------
+- Dopo aver nascosto i numeri (passati i 30 secondi)...
+*/
 setTimeout(timerCountdown, 30000);
 
 function timerCountdown() {
+
+    titleDisplayed.innerHTML = "Quali erano i numeri visualizzati precedentemente?"
     numbersDisplayed.style.display = 'none';
+    numbersInput.style.display = "block";
+    checkBtn.style.display = "block";
 }
 
 
-/* 
-- Dopo aver nascosto i numeri chiedete all'utente di inserirli in ordine, uno alla volta.
+
+/*
+-----------------------------------------------------------------------------
+- ...chiedete all'utente di inserirli in ordine, uno alla volta.
 */
 
-numbersDisplayed.innerHTML = randomNumbersArr;
+
 
 checkBtn.addEventListener('click', function(){
 
-    if(numbersInput.value == randomNumbersArr){
-        numbersOutput.innerHTML = 'Hai vinto!'
-    }
-    
 });
