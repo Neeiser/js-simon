@@ -35,7 +35,7 @@ while (randomNumbersArr.length < 5){
 */
 
 function timer() {
-    let counter = 30;
+    let counter = 29;
     let timer = setInterval(function() {
       document.getElementById("timer").innerHTML = counter;
       counter--;
@@ -46,11 +46,11 @@ function timer() {
   }
 timer();
 
-/* setTimeout(timerCountdown, 3000);
+setTimeout(timerCountdown, 30000);
 
-function timerCountdown(number) {
-    .....innerHTML = number;
-} */
+function timerCountdown() {
+    numbersDisplayed.style.display = 'none';
+}
 
 
 /* 
