@@ -23,16 +23,16 @@ h1{
 
 .container{
     width: 50%;
-    height: 50%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid black;
 }
 
 #title {
     font-size: 5rem;
+    padding-bottom: 20px;
 }
 
 #numbers-input{
@@ -40,6 +40,7 @@ h1{
     padding: 20px 30px;
     margin: 30px 0;
     font-size: 2rem;
+    border-radius: 10px;
 }
 
 #check-btn{
@@ -47,4 +48,5 @@ h1{
     padding: 10px 30px;
     margin: 10px 0;
     font-size: 1.2rem;
+    border-radius: 10px;
 }

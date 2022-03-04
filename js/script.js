@@ -28,9 +28,12 @@ while (randomNumbersArr.length < 5){
     console.log(randomNumbersArr)
 }
 
-numbersDisplayed.innerHTML = 'I numeri da memorizzare sono: ' + '<br>' + randomNumbersArr;
+numbersDisplayed.innerHTML = 'I numeri da memorizzare sono:' + '<br>' + randomNumbersArr;
 
 checkBtn.addEventListener('click', function(){
 
+    if(numbersInput.value == randomNumbersArr){
+        numbersOutput.innerHTML = 'Hai vinto!'
+    }
     
 });
