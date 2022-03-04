@@ -28,7 +28,36 @@ while (randomNumbersArr.length < 5){
     console.log(randomNumbersArr)
 }
 
-numbersDisplayed.innerHTML = 'I numeri da memorizzare sono:' + '<br>' + randomNumbersArr;
+
+
+/* 
+- Da lì parte un timer di 30 secondi.
+*/
+
+function timer() {
+    let counter = 30;
+    let timer = setInterval(function() {
+      document.getElementById("timer").innerHTML = counter;
+      counter--;
+      if (counter < 0) { /* PER BLOCCARLO ALLO 0 */
+        clearInterval(timer);
+      }
+    }, 1000);
+  }
+timer();
+
+/* setTimeout(timerCountdown, 3000);
+
+function timerCountdown(number) {
+    .....innerHTML = number;
+} */
+
+
+/* 
+- Dopo aver nascosto i numeri chiedete all'utente di inserirli in ordine, uno alla volta.
+*/
+
+numbersDisplayed.innerHTML = randomNumbersArr;
 
 checkBtn.addEventListener('click', function(){
 

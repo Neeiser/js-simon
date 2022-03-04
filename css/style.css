@@ -10,6 +10,7 @@ body {
 }
 
 main{
+    position: relative;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -49,4 +50,19 @@ h1{
     margin: 10px 0;
     font-size: 1.2rem;
     border-radius: 10px;
+}
+
+#timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border: 5px solid #005f73;
+    border-radius: 50%;
 }
