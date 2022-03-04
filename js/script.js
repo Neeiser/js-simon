@@ -13,6 +13,11 @@ const numbersOutput = document.getElementById ('output')
 const randomNumbersArr = [];
 
 
+
+/* 
+- Visualizzare in pagina 5 numeri casuali.
+*/
+
 while (randomNumbersArr.length < 5){
     let numberPulled = Math.floor(Math.random() * 20 ) + 1;
     
@@ -22,6 +27,8 @@ while (randomNumbersArr.length < 5){
 
     console.log(randomNumbersArr)
 }
+
+numbersDisplayed.innerHTML = 'I numeri da memorizzare sono: ' + '<br>' + randomNumbersArr;
 
 checkBtn.addEventListener('click', function(){
 
