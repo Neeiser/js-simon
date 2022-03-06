@@ -9,10 +9,12 @@ const numbersDisplayed = document.getElementById ('numbers-displayed')
 const titleDisplayed = document.getElementById ('title-displayed')
 const numbersInput = document.getElementById ('numbers-input')
 const checkBtn = document.getElementById ('check-btn')
-const numbersOutput = document.getElementById ('output')
+const resultOutput1 = document.getElementById ('output1')
+const resultOutput2 = document.getElementById ('output2')
+const resultOutput3 = document.getElementById ('output3')
 
 const randomNumbersArr = [];
-
+const userNumbersArr = [];
 
 /*
 -----------------------------------------------------------------------------
@@ -59,7 +61,7 @@ timer();
 -----------------------------------------------------------------------------
 - Dopo aver nascosto i numeri (passati i 30 secondi)...
 */
-setTimeout(timerCountdown, 30000);
+setTimeout(timerCountdown, 1000);
 
 function timerCountdown() {
 
@@ -76,8 +78,25 @@ function timerCountdown() {
 - ...chiedete all'utente di inserirli in ordine, uno alla volta.
 */
 
+checkBtn.addEventListener('click', function() {
 
-
-checkBtn.addEventListener('click', function(){
+  if (userNumbersArr.length < 5){
+    for(i = 0; i < 1; i++) {
+      userNumbersArr.push(parseInt(numbersInput.value));
+      console.log(userNumbersArr)
+      numbersInput.value= "";
+    }
+/*
+-----------------------------------------------------------------------------
+- Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri sono stati individuati.
+*/
+  } else {
+    titleDisplayed.innerHTML = "GIOCO CONCLUSO!";
+    numbersInput.style.display = 'none';
+    checkBtn.style.display = 'none';
+    resultOutput1.innerHTML = "I numeri da te inseriti sono: " + userNumbersArr;
+    resultOutput2.innerHTML = "I numeri da ricordare erano: " + randomNumbersArr;
+    resultOutput3.innerHTML = "il tuo punteggio totale è di: ";
+  }
 
 });

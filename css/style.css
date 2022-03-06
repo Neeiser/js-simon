@@ -68,3 +68,11 @@ h1{
     border: 5px solid #005f73;
     border-radius: 50%;
 }
+
+h2 {
+    margin-top: 20px;
+}
+
+#output3 {
+    color: #005f73;
+}
