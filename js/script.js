@@ -61,7 +61,7 @@ timer();
 -----------------------------------------------------------------------------
 - Dopo aver nascosto i numeri (passati i 30 secondi)...
 */
-setTimeout(timerCountdown, 1000);
+setTimeout(timerCountdown, 30000);
 
 function timerCountdown() {
 
