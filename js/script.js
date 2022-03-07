@@ -91,12 +91,18 @@ checkBtn.addEventListener('click', function() {
 - Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri sono stati individuati.
 */
   } else {
+    let score = [];
+    for (i = 0; i < userNumbersArr.length; i++){
+      if (randomNumbersArr[i] == userNumbersArr[i]){
+        score.push(userNumbersArr[i])
+      }
+    }
     titleDisplayed.innerHTML = "GIOCO CONCLUSO!";
     numbersInput.style.display = 'none';
     checkBtn.style.display = 'none';
     resultOutput1.innerHTML = "I numeri da te inseriti sono: " + userNumbersArr;
     resultOutput2.innerHTML = "I numeri da ricordare erano: " + randomNumbersArr;
-    resultOutput3.innerHTML = "il tuo punteggio totale è di: ";
+    resultOutput3.innerHTML = "I numeri che hai indovinato sono: " + score;
   }
 
 });
